@@ -1,9 +1,14 @@
 # downloading and installing miniconda
 
 # miniconda
-wget https://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86.sh
+if [ -e  Miniconda-latest-Linux-x86.sh ]; then
+    echo "File already downloaded."
+else
+    wget https://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86.sh
+fi
+
 /bin/bash Miniconda-latest-Linux-x86.sh
-rm Miniconda-latest-Linux-x86.sh
+#rm Miniconda-latest-Linux-x86.sh
 
 # prepend path
 echo export PATH=~/miniconda2/bin:\$PATH >> ~/.bashrc
