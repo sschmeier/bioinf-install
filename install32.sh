@@ -6,7 +6,7 @@ wget https://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86.sh
 rm Miniconda-latest-Linux-x86.sh
 
 # prepend path
-echo "export PATH=~/miniconda2/bin/:$PATH" >> ~/.bashrc
+echo export PATH=~/miniconda2/bin:\$PATH >> ~/.bashrc
 source ~/.bashrc
 
 # channnels for bioinf
